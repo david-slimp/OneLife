@@ -24054,6 +24054,7 @@ void LivingLifePage::keyDown( unsigned char inASCII ) {
 					return;
 				}
 			} else if (commandKey) {
+                printf( "inASCII is :%d:\n",inASCII );  // DEBUG - verify value of inASCII, the following if statements are not working for me, since when I press CTRL-A my inASCII value here shows 97, but with the code of '+64' in the if statements comparing toupper, we obviously expect inASCII to be a "1" for CTRL-A, not a "97" -- DBS
 				if (inASCII+64 == toupper(charKey_Up)) {
 					actionBetaRelativeToMe( 0, 1 );
 					return;
